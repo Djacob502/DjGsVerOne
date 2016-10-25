@@ -46,7 +46,7 @@
         <!-- Google maps meta data and api key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB9M77zocEVJ9Gx5u-236xlItWBpRmULRQ" />
+            android:value="<insert google map api key here>" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -56,7 +56,7 @@
 
         <meta-data
             android:name="com.dji.sdk.API_KEY"
-            android:value="049a05dc2b60dcc5350684a2" />
+            android:value="<insert dji sdk application key here>" />
 
         <activity
             android:name="dji.sdk.sdkmanager.DJIAoaControllerActivity"
