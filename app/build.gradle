@@ -1,16 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-        }
-        release {
-            keyAlias 'AndroidKeyDjGs'
-            keyPassword 'ppy332'
-            storeFile file('C:/Users/djacc/asp/keystore/DjGs.jks')
-            storePassword 'adf229'
-        }
-    }
+    
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
     defaultConfig {
