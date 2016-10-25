@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+        }
+        release {
+            keyAlias 'AndroidKeyDjGs'
+            keyPassword 'ppy332'
+            storeFile file('C:/Users/djacc/asp/keystore/DjGs.jks')
+            storePassword 'adf229'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+    defaultConfig {
+        applicationId "com.ecolumbia.djgs"
+        minSdkVersion 22
+        targetSdkVersion 22
+        // Enabling multidex support.
+        multiDexEnabled true
+        versionCode 6
+        versionName "0.006"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+            signingConfig signingConfigs.release
+            renderscriptDebuggable false
+        }
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.google.android.gms:play-services:9.4.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.google.android.gms:play-services-ads:9.4.0'
+    compile 'com.google.android.gms:play-services-auth:9.4.0'
+    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    compile project(':openCVLibrary310')
+    compile project(':videostreamdebug')
+    compile project(':dJISDKLIB')
+}
+
